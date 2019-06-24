@@ -5,7 +5,6 @@ class Api::V1::BracketsController < ApplicationController
   def create
     response = JSON.parse(request.body.read)
     bracket = response["bracket"]
-    binding.pry
     newBracket = Bracket.new
     newBracket.name = response["name"]
     newBracket.pick_1 = bracket["pick_1"]
