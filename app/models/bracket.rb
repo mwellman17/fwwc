@@ -1,0 +1,35 @@
+class Bracket < ApplicationRecord
+  validates :name, presence: true
+  validates :pick_1, presence: true
+  validates :pick_2, presence: true
+  validates :pick_3, presence: true
+  validates :pick_4, presence: true
+  validates :pick_5, presence: true
+  validates :pick_6, presence: true
+  validates :pick_7, presence: true
+  validates :pick_8, presence: true
+  validates :pick_9, presence: true
+  validates :pick_10, presence: true
+  validates :pick_11, presence: true
+  validates :pick_12, presence: true
+  validates :pick_13, presence: true
+  validates :pick_14, presence: true
+  validates :pick_15, presence: true
+  validates :pick_16, presence: true
+  validates :pick_q1, presence: true
+  validates :pick_q2, presence: true
+  validates :pick_q3, presence: true
+  validates :pick_q4, presence: true
+  validates :pick_q5, presence: true
+  validates :pick_q6, presence: true
+  validates :pick_q7, presence: true
+  validates :pick_q8, presence: true
+  validates :pick_s1, presence: true
+  validates :pick_s2, presence: true
+  validates :pick_s3, presence: true
+  validates :pick_s4, presence: true
+  validates :pick_f1, presence: true
+  validates :pick_f2, presence: true
+  validates :pick_winner, presence: true
+  validates :pick_third, presence: true
+end
