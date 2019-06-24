@@ -1,7 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { Router, browserHistory, Route, IndexRoute } from 'react-router';
+import BracketForm from './BracketForm'
 
-export const App = (props) => {
-  return (<h1>Make It So React</h1>)
+const App = props => {
+  return(
+
+  <Router history={browserHistory}>
+    <Route path='/brackets' component={BracketForm} />
+  </Router>
+
+  )
 }
 
 export default App
