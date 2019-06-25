@@ -201,7 +201,6 @@ class Bracket < ApplicationRecord
     round_one_ticker = 0
     round_two_ticker = 0
     round_three_ticker = 0
-    round_four_ticker = 0
     if !scorecard.pick_third && self.pick_third != scorecard.pick_f1 && self.pick_third != scorecard.pick_f2 && check_round_three("pick_third", round_one_ticker, round_two_ticker, round_three_ticker, scorecard)
       possible_counter += 20
     end
