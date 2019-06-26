@@ -23,7 +23,7 @@ li {
   width: 50px;
 }
 
-.score {
+.score-total {
   font-weight: bold;
   font-size: 22pt
 }
@@ -43,4 +43,25 @@ li {
 .winner-flag {
   width: 80px;
   margin: auto;
+}
+
+.correct-pick {
+  color: green;
+  font-weight: bold;
+}
+
+.incorrect-pick {
+  color: red;
+  text-decoration: line-through;
+}
+
+.no-entry {
+  color: grey;
+  font-style: italic;
+}
+
+p.possible-score.year {
+  color:grey;
+  font-size: 14px;
+  letter-spacing: 5px;
 }

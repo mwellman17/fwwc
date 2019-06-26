@@ -171,6 +171,7 @@ class Bracket < ApplicationRecord
       end
       round_one_ticker += 2
     end
+
     round_one_ticker = 0
     round_two_ticker = 0
     ROUND_THREE.each do |pick|
@@ -180,6 +181,7 @@ class Bracket < ApplicationRecord
       round_one_ticker += 4
       round_two_ticker += 2
     end
+
     round_one_ticker = 0
     round_two_ticker = 0
     round_three_ticker = 0
@@ -191,19 +193,15 @@ class Bracket < ApplicationRecord
       round_two_ticker += 4
       round_three_ticker += 2
     end
-    round_one_ticker = 0
-    round_two_ticker = 0
-    round_three_ticker = 0
-    round_four_ticker = 0
-    if !scorecard.pick_winner && check_round_four("pick_winner", round_one_ticker, round_two_ticker, round_three_ticker, round_four_ticker, scorecard)
+
+    if !scorecard.pick_winner && !Team.find_by(:name => self.pick_winner).eliminated
       possible_counter += 50
     end
-    round_one_ticker = 0
-    round_two_ticker = 0
-    round_three_ticker = 0
-    if !scorecard.pick_third && self.pick_third != scorecard.pick_f1 && self.pick_third != scorecard.pick_f2 && check_round_three("pick_third", round_one_ticker, round_two_ticker, round_three_ticker, scorecard)
+
+    if !scorecard.pick_third && !Team.find_by(:name => self.pick_third).eliminated
       possible_counter += 20
     end
+
     return possible_counter
   end
 end
