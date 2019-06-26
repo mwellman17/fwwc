@@ -10,7 +10,7 @@
 <% def check (team, pick, last_round = nil)
   if team == @scorecard[pick]
     return "correct-pick"
-  elsif team == "no-entry"
+  elsif team == "no entry"
     return "no-entry"
   elsif @eliminated_teams.include?(team) || (@scorecard[pick] && team != @scorecard[pick])
     return "incorrect-pick"
