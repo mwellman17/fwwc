@@ -9,10 +9,10 @@
 <% def check (team, pick)
   if team == @scorecard[pick]
     return "correct-pick"
-  elsif @eliminated_teams.include?(team)
-    return "incorrect-pick"
   elsif team == "no-entry"
     return "no-entry"
+  elsif @eliminated_teams.include?(team) || team != @scorecard[pick]
+    return "incorrect-pick"
   else
     return ""
   end
