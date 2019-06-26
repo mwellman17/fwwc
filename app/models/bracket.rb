@@ -194,11 +194,11 @@ class Bracket < ApplicationRecord
       round_three_ticker += 2
     end
 
-    if !scorecard.pick_winner && !Team.find_by(:name => self.pick_winner).eliminated
+    if !scorecard.pick_winner && Team.exists?(:name => self.pick_winner) && !Team.find_by(:name => self.pick_winner).eliminated
       possible_counter += 50
     end
 
-    if !scorecard.pick_third && !Team.find_by(:name => self.pick_third).eliminated
+    if !scorecard.pick_third && Team.exists?(:name => self.pick_third) && !Team.find_by(:name => self.pick_third).eliminated
       possible_counter += 20
     end
 

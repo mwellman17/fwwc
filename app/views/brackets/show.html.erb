@@ -6,12 +6,15 @@
  </div>
 </header>
 
-<% def check (team, pick)
+<% def check (team, pick, last_round = nil)
   if team == @scorecard[pick]
     return "correct-pick"
   elsif team == "no-entry"
     return "no-entry"
   elsif @eliminated_teams.include?(team) || (@scorecard[pick] && team != @scorecard[pick])
+    return "incorrect-pick"
+  elsif last_round && (@scorecard[last_round[0]].nil? || @scorecard[last_round[1].nil?])
+  elsif last_round && @scorecard[last_round[0]] != team && @scorecard[last_round[1]] != team
     return "incorrect-pick"
   else
     return ""
@@ -84,20 +87,20 @@ end %>
       <div class="round round-two current">
         <div class="round-details">Quarter Finals<br/><span class="date">June 27 - 29</span></div>
         <ul class="matchup">
-          <li class="team team-top <%= check(@bracket.pick_q1, "pick_q1") %>"><%= @bracket.pick_q1 %><span class="score"><%= check_round_two_points(@bracket.pick_q1, "pick_q1") %></span></li>
-          <li class="team team-top <%= check(@bracket.pick_q2, "pick_q2") %>"><%= @bracket.pick_q2 %><span class="score"><%= check_round_two_points(@bracket.pick_q2, "pick_q2") %></span></li>
+          <li class="team team-top <%= check(@bracket.pick_q1, "pick_q1", ["pick_1", "pick_2"]) %>"><%= @bracket.pick_q1 %><span class="score"><%= check_round_two_points(@bracket.pick_q1, "pick_q1") %></span></li>
+          <li class="team team-top <%= check(@bracket.pick_q2, "pick_q2", ["pick_3", "pick_4"]) %>"><%= @bracket.pick_q2 %><span class="score"><%= check_round_two_points(@bracket.pick_q2, "pick_q2") %></span></li>
         </ul>
         <ul class="matchup">
-          <li class="team team-top <%= check(@bracket.pick_q3, "pick_q3") %>"><%= @bracket.pick_q3 %><span class="score"><%= check_round_two_points(@bracket.pick_q3, "pick_q3") %></span></li>
-          <li class="team team-top <%= check(@bracket.pick_q4, "pick_q4") %>"><%= @bracket.pick_q4 %><span class="score"><%= check_round_two_points(@bracket.pick_q4, "pick_q4") %></span></li>
+          <li class="team team-top <%= check(@bracket.pick_q3, "pick_q3", ["pick_5", "pick_6"]) %>"><%= @bracket.pick_q3 %><span class="score"><%= check_round_two_points(@bracket.pick_q3, "pick_q3") %></span></li>
+          <li class="team team-top <%= check(@bracket.pick_q4, "pick_q4", ["pick_7", "pick_8"]) %>"><%= @bracket.pick_q4 %><span class="score"><%= check_round_two_points(@bracket.pick_q4, "pick_q4") %></span></li>
         </ul>
       </div>  <!-- END ROUND TWO -->
 
       <div class="round round-three current">
         <div class="round-details">Semi Finals<br/><span class="date">July 2 - 3</span></div>
         <ul class="matchup">
-          <li class="team team-top <%= check(@bracket.pick_s1, "pick_s1") %>"><%= @bracket.pick_s1 %><span class="score"><%= check_round_three_points(@bracket.pick_s1, "pick_s1") %></span></li>
-          <li class="team team-top <%= check(@bracket.pick_s2, "pick_s2") %>"><%= @bracket.pick_s2 %><span class="score"><%= check_round_three_points(@bracket.pick_s2, "pick_s2") %></span></li>
+          <li class="team team-top <%= check(@bracket.pick_s1, "pick_s1", ["pick_q1", "pick_q2"]) %>"><%= @bracket.pick_s1 %><span class="score"><%= check_round_three_points(@bracket.pick_s1, "pick_s1") %></span></li>
+          <li class="team team-top <%= check(@bracket.pick_s2, "pick_s2", ["pick_q3", "pick_q4"]) %>"><%= @bracket.pick_s2 %><span class="score"><%= check_round_three_points(@bracket.pick_s2, "pick_s2") %></span></li>
         </ul>
       </div>  <!-- END ROUND THREE -->
     </div>
@@ -114,8 +117,8 @@ end %>
         <%= image_tag("trophy.png", :class => "trophy-img") %>
         <div class="round-details">Final<br/></div>
         <ul class ="matchup championship current">
-          <li class="team team-top <%= check(@bracket.pick_f1, "pick_f1") %>"><%= @bracket.pick_f1 %><span class="score"><%= check_round_four_points(@bracket.pick_f1, "pick_f1") %></span></li>
-          <li class="team team-top <%= check(@bracket.pick_f2, "pick_f2") %>"><%= @bracket.pick_f2 %><span class="score"><%= check_round_four_points(@bracket.pick_f2, "pick_f2") %></span></li>
+          <li class="team team-top <%= check(@bracket.pick_f1, "pick_f1", ["pick_s1", "pick_s2"]) %>"><%= @bracket.pick_f1 %><span class="score"><%= check_round_four_points(@bracket.pick_f1, "pick_f1") %></span></li>
+          <li class="team team-top <%= check(@bracket.pick_f2, "pick_f2", ["pick_s3", "pick_s4"]) %>"><%= @bracket.pick_f2 %><span class="score"><%= check_round_four_points(@bracket.pick_f2, "pick_f2") %></span></li>
         </ul>
       </div>
       <div class="semis-r">
@@ -132,20 +135,20 @@ end %>
       <div class="round round-three current">
         <div class="round-details">Semi Finals<br/><span class="date">July 2 - 3</span></div>
         <ul class="matchup">
-          <li class="team team-top <%= check(@bracket.pick_s3, "pick_s3") %>"><%= @bracket.pick_s3 %><span class="score"><%= check_round_three_points(@bracket.pick_s3, "pick_s3") %></span></li>
-          <li class="team team-top <%= check(@bracket.pick_s4, "pick_s4") %>"><%= @bracket.pick_s4 %><span class="score"><%= check_round_three_points(@bracket.pick_s4, "pick_s4") %></span></li>
+          <li class="team team-top <%= check(@bracket.pick_s3, "pick_s3", ["pick_q5", "pick_q6"]) %>"><%= @bracket.pick_s3 %><span class="score"><%= check_round_three_points(@bracket.pick_s3, "pick_s3") %></span></li>
+          <li class="team team-top <%= check(@bracket.pick_s4, "pick_s4", ["pick_q7", "pick_q8"]) %>"><%= @bracket.pick_s4 %><span class="score"><%= check_round_three_points(@bracket.pick_s4, "pick_s4") %></span></li>
         </ul>
       </div>  <!-- END ROUND THREE -->
 
       <div class="round round-two current">
         <div class="round-details">Quarter Finals<br/><span class="date">June 27 - 29</span></div>
         <ul class="matchup">
-          <li class="team team-top <%= check(@bracket.pick_q5, "pick_q5") %>"><%= @bracket.pick_q5 %><span class="score"><%= check_round_two_points(@bracket.pick_q5, "pick_q5") %></span></li>
-          <li class="team team-top <%= check(@bracket.pick_q6, "pick_q6") %>"><%= @bracket.pick_q6 %><span class="score"><%= check_round_two_points(@bracket.pick_q6, "pick_q6") %></span></li>
+          <li class="team team-top <%= check(@bracket.pick_q5, "pick_q5", ["pick_9", "pick_10"]) %>"><%= @bracket.pick_q5 %><span class="score"><%= check_round_two_points(@bracket.pick_q5, "pick_q5") %></span></li>
+          <li class="team team-top <%= check(@bracket.pick_q6, "pick_q6", ["pick_11", "pick_12"]) %>"><%= @bracket.pick_q6 %><span class="score"><%= check_round_two_points(@bracket.pick_q6, "pick_q6") %></span></li>
         </ul>
         <ul class="matchup">
-          <li class="team team-top <%= check(@bracket.pick_q7, "pick_q7") %>"><%= @bracket.pick_q7 %><span class="score"><%= check_round_two_points(@bracket.pick_q7, "pick_q7") %></span></li>
-          <li class="team team-top <%= check(@bracket.pick_q8, "pick_q8") %>"><%= @bracket.pick_q8 %><span class="score"><%= check_round_two_points(@bracket.pick_q8, "pick_q8") %></span></li>
+          <li class="team team-top <%= check(@bracket.pick_q7, "pick_q7", ["pick_13", "pick_14"]) %>"><%= @bracket.pick_q7 %><span class="score"><%= check_round_two_points(@bracket.pick_q7, "pick_q7") %></span></li>
+          <li class="team team-top <%= check(@bracket.pick_q8, "pick_q8", ["pick_15", "pick_16"]) %>"><%= @bracket.pick_q8 %><span class="score"><%= check_round_two_points(@bracket.pick_q8, "pick_q8") %></span></li>
         </ul>
       </div>  <!-- END ROUND TWO -->
       <div class="round round-one current">
