@@ -2,7 +2,7 @@
   <h1>Leaderboard</h1>
   <ul>
     <% @brackets.each do |bracket| %>
-      <li><p class="score inline"><%= bracket.score %></p><%= image_tag(bracket.flag, :class => "thumbnail inline") %><p class="name inline"><%= bracket.name %></p><p class="total inline"><%= bracket.possible_points %></p></li>
+      <li><p class="score inline"><%= bracket.score %></p><%= image_tag(bracket.flag, :class => "thumbnail inline") %><p class="name inline"><%= link_to bracket.name, bracket_path(bracket) %></p><p class="total inline"><%= bracket.possible_points %></p></li>
     <% end %>
   </ul>
   <%= image_tag("foxfwwc.png", :class => "fox-logo") %>

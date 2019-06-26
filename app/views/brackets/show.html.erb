@@ -1,0 +1,120 @@
+<header class="hero">
+  <div class="hero-wrap">
+    <p><%= @bracket.name %></p>
+    <p class="year"><%= "#{@bracket.score} / #{@bracket.possible_points}" %></p>
+ </div>
+</header>
+
+
+<section id="bracket">
+  <div class="container">
+    <div class="split split-one">
+      <div class="round round-one current">
+        <div class="round-details">Round of 16<br/><span class="date">June 22 - 25</span></div>
+        <ul class="matchup">
+          <li class="team team-top"><%= @bracket.pick_1 %></li>
+          <li class="team team-bottom"><%= @bracket.pick_2 %></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top"><%= @bracket.pick_3 %></li>
+          <li class="team team-bottom"><%= @bracket.pick_4 %></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top"><%= @bracket.pick_5 %></li>
+          <li class="team team-bottom"><%= @bracket.pick_6 %></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top"><%= @bracket.pick_7 %></li>
+          <li class="team team-bottom"><%= @bracket.pick_8 %></li>
+        </ul>
+      </div>  <!-- END ROUND ONE -->
+
+      <div class="round round-two current">
+        <div class="round-details">Quarter Finals<br/><span class="date">June 27 - 29</span></div>
+        <ul class="matchup">
+          <li class="team team-top"><%= @bracket.pick_q1 %></li>
+          <li class="team team-bottom"><%= @bracket.pick_q2 %></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top"><%= @bracket.pick_q3 %></li>
+          <li class="team team-bottom"><%= @bracket.pick_q4 %></li>
+        </ul>
+      </div>  <!-- END ROUND TWO -->
+
+      <div class="round round-three current">
+        <div class="round-details">Semi Finals<br/><span class="date">July 2 - 3</span></div>
+        <ul class="matchup">
+          <li class="team team-top"><%= @bracket.pick_s1 %></li>
+          <li class="team team-bottom"><%= @bracket.pick_s2 %></li>
+        </ul>
+      </div>  <!-- END ROUND THREE -->
+    </div>
+
+    <div class="champion">
+      <div class="semis-l">
+        <div class="round-details">World Cup Winner<br/><span class="date">July 7</span></div>
+        <ul class ="matchup championship current">
+          <li class="team team-top"><%= @bracket.pick_winner %></li>
+        </ul>
+      </div>
+      <%= image_tag(@bracket.flag, :class => "winner-flag") %>
+      <div class="final">
+        <%= image_tag("trophy.png", :class => "trophy-img") %>
+        <div class="round-details">Final<br/></div>
+        <ul class ="matchup championship current">
+          <li class="team team-top"><%= @bracket.pick_f1 %></li>
+          <li class="team team-bottom"><%= @bracket.pick_f2 %></li>
+        </ul>
+      </div>
+      <div class="semis-r">
+        <div class="round-details">3rd Place Winner<br/><span class="date">July 6</span></div>
+        <ul class ="matchup championship current">
+          <li class="team team-top"><%= @bracket.pick_third %></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="split split-two">
+
+      <div class="round round-three current">
+        <div class="round-details">Semi Finals<br/><span class="date">July 2 - 3</span></div>
+        <ul class="matchup">
+          <li class="team team-top"><%= @bracket.pick_s3 %></li>
+          <li class="team team-bottom"><%= @bracket.pick_s4 %></li>
+        </ul>
+      </div>  <!-- END ROUND THREE -->
+
+      <div class="round round-two current">
+        <div class="round-details">Quarter Finals<br/><span class="date">June 27 - 29</span></div>
+        <ul class="matchup">
+          <li class="team team-top"><%= @bracket.pick_q5 %></li>
+          <li class="team team-bottom"><%= @bracket.pick_q6 %></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top"><%= @bracket.pick_q7 %></li>
+          <li class="team team-bottom"><%= @bracket.pick_q8 %></li>
+        </ul>
+      </div>  <!-- END ROUND TWO -->
+      <div class="round round-one current">
+        <div class="round-details">Round of 16<br/><span class="date">June 22 - 25</span></div>
+        <ul class="matchup">
+          <li class="team team-top"><%= @bracket.pick_9 %></li>
+          <li class="team team-bottom"><%= @bracket.pick_10 %></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top"><%= @bracket.pick_11 %></li>
+          <li class="team team-bottom"><%= @bracket.pick_12 %></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top"><%= @bracket.pick_13 %></li>
+          <li class="team team-bottom"><%= @bracket.pick_14 %></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top"><%= @bracket.pick_15 %></li>
+          <li class="team team-bottom"><%= @bracket.pick_16 %></li>
+        </ul>
+      </div>  <!-- END ROUND ONE -->
+    </div>
+  </div>
+</section>
