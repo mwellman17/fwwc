@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "France Fifa";
+  src: url(/assets/France-Fifa.otf) format("opentype");
+}
+
 .fox-logo {
   width: 40rem;
   display: block;
@@ -6,13 +11,13 @@
 
 h1.leaderboard {
   text-align: center;
-  font-family: 'Holtwood One SC', serif;
+  font-family: 'France Fifa', serif;
   font-weight: normal;
   font-size: 2.5em;
   margin:0 0 20px;
-  text-shadow:0 0 6px rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
   letter-spacing:-1px;
+  color: #0F096C;
 }
 
 .bracket-list {
@@ -48,12 +53,12 @@ li {
 .score-total {
   font-weight: bold;
   font-size: 22pt;
-  color: #0769B6;
+  color: #0F096C;
 }
 
 a.name {
   font-family: sans-serif;
-  color: #0769B6;
+  color: #0F096C;
   text-transform: uppercase;
 }
 
@@ -99,7 +104,7 @@ p.possible-score.year {
   text-align: left;
   padding-left: 2rem;
   margin: 0;
-  color: #0769B6;
+  color: #0F096C;
 }
 
 .back-button:hover {
