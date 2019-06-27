@@ -204,4 +204,10 @@ class Bracket < ApplicationRecord
 
     return possible_counter
   end
+
+  def rank
+    brackets = Bracket.all.sort { |a, b|  b.score <=> a.score }
+    ranking = brackets.index { |obj| obj.score == self.score }
+    return ranking + 1
+  end
 end

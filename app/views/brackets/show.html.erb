@@ -1,5 +1,5 @@
 <header class="hero">
-  <p class="back-button"><i class="fa fa-angle-left"></i><%= link_to "Back", root_path %></p>
+  <p class="back-button"><i class="fa fa-angle-left"></i><%= link_to "Back", root_path, { :class => "back-button" } %></p>
   <div class="hero-wrap">
     <p><%= @bracket.name %></p>
     <p class="year inline"><%= @bracket.score %></p>

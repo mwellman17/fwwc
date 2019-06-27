@@ -1,15 +1,31 @@
 .fox-logo {
-  height: 20rem;
-  float: right;
+  width: 40rem;
+  display: block;
+  margin: 0 auto;
 }
 
-h1 {
-  margin-left: 5rem;
+h1.leaderboard {
+  text-align: center;
+  font-family: 'Holtwood One SC', serif;
+  font-weight: normal;
+  font-size: 2.5em;
+  margin:0 0 20px;
+  text-shadow:0 0 6px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  letter-spacing:-1px;
+}
+
+.bracket-list {
+  width: 400px;
+  margin: 0 auto;
 }
 
 li {
-  margin-left: 7rem;
   list-style-type: none;
+}
+
+.right {
+  text-align: right;
 }
 
 .inline {
@@ -23,13 +39,26 @@ li {
   width: 50px;
 }
 
-.score-total {
+.ranking {
   font-weight: bold;
-  font-size: 22pt
+  font-size: 22pt;
+  padding-right: 1.5rem;
 }
 
-.name {
-  font-family: serif;
+.score-total {
+  font-weight: bold;
+  font-size: 22pt;
+  color: #0769B6;
+}
+
+a.name {
+  font-family: sans-serif;
+  color: #0769B6;
+  text-transform: uppercase;
+}
+
+a.name:hover {
+  color: #A50000;
 }
 
 .total {
@@ -70,4 +99,9 @@ p.possible-score.year {
   text-align: left;
   padding-left: 2rem;
   margin: 0;
+  color: #0769B6;
+}
+
+.back-button:hover {
+  color: #A50000;
 }
