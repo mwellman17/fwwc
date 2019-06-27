@@ -15,6 +15,7 @@
   elsif @eliminated_teams.include?(team) || (@scorecard[pick] && team != @scorecard[pick])
     return "incorrect-pick"
   elsif last_round && (@scorecard[last_round[0]].nil? || @scorecard[last_round[1].nil?])
+    return ""
   elsif last_round && @scorecard[last_round[0]] != team && @scorecard[last_round[1]] != team
     return "incorrect-pick"
   else
