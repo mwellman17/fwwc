@@ -1,12 +1,15 @@
 <div class="">
-  <h1>Leaderboard</h1>
-  <ul>
+  <h1 class="leaderboard">Leaderboard</h1>
+  <ul class="bracket-list">
     <% @brackets.each do |bracket| %>
       <li>
-        <p class="score-total inline"><%= bracket.score %></p>
-        <%= image_tag(bracket.flag, :class => "thumbnail inline") %>
-        <p class="name inline"><%= link_to bracket.name, bracket_path(bracket) %></p>
-        <p class="total inline"><%= bracket.possible_points %></p>
+        <p class="ranking inline"><%= bracket.rank %></p>
+        <span class="right">
+          <p class="name inline"><%= link_to bracket.name, bracket_path(bracket), { :class => "name"} %></p>
+          <p class="score-total inline"><%= bracket.score %></p>
+          <p class="total inline"><%= bracket.possible_points %></p>
+          <%= image_tag(bracket.flag, :class => "thumbnail inline") %>
+        </span>
       </li>
     <% end %>
   </ul>
