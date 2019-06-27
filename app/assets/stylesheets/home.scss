@@ -1,6 +1,6 @@
 @font-face {
   font-family: "France Fifa";
-  src: font-url('/assets/France-Fifa.otf') format('opentype');
+  src: asset-path(FranceFifa) format('opentype');
 }
 
 .fox-logo {
