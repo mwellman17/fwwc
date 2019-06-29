@@ -238,7 +238,7 @@ class Bracket < ApplicationRecord
 
   def talent_possible_points
     scorecard = Scorecard.first
-    possible_counter = self.score
+    possible_counter = self.talent_score
     round_one_ticker = 0
     ROUND_TWO.each do |pick|
       if !scorecard[pick] && check_round_one(pick, round_one_ticker, scorecard)

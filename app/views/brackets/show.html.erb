@@ -1,9 +1,19 @@
+<%
+if @bracket.in_pool
+  score = @bracket.score
+  possible_points = @bracket.possible_points
+else
+  score = @bracket.talent_score
+  possible_points = @bracket.talent_possible_points
+end
+%>
+
 <header class="hero">
   <p class="back-button"><i class="fa fa-angle-left"></i><%= link_to "Back", root_path, { :class => "back-button" } %></p>
   <div class="hero-wrap">
     <p><%= @bracket.name %></p>
-    <p class="year inline"><%= @bracket.score %></p>
-    <p class="year inline possible-score"><%= "(#{@bracket.possible_points})" %></p>
+    <p class="year inline"><%= score %></p>
+    <p class="year inline possible-score"><%= "(#{possible_points})" %></p>
  </div>
 </header>
 
