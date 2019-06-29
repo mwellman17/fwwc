@@ -290,4 +290,13 @@ class Bracket < ApplicationRecord
     ranking = brackets.index { |obj| obj.score == self.score }
     return ranking + 1
   end
+
+  def last_name
+    name_array = self.name.split(' ')
+    if name_array.length > 1
+      return name_array[1]
+    else
+      return self.name
+    end
+  end
 end
