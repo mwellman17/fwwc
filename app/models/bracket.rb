@@ -108,6 +108,38 @@ class Bracket < ApplicationRecord
     return points
   end
 
+  def talent_score
+    scorecard = Scorecard.first
+    points = 0
+    ROUND_ONE.each do |pick|
+      if self[pick] == scorecard[pick]
+        points += 0
+      end
+    end
+    ROUND_TWO.each do |pick|
+      if self[pick] == scorecard[pick]
+        points += 2
+      end
+    end
+    ROUND_THREE.each do |pick|
+      if self[pick] == scorecard[pick]
+        points += 4
+      end
+    end
+    ROUND_FOUR.each do |pick|
+      if self[pick] == scorecard[pick]
+        points += 8
+      end
+    end
+    if self.pick_third == scorecard.pick_third
+      points += 12
+    end
+    if self.pick_winner == scorecard.pick_winner
+      points += 16
+    end
+    return points
+  end
+
 
   def check_round_one (pick, round_one_ticker, scorecard)
     !scorecard[pick] && (self[pick] == scorecard[ROUND_ONE[round_one_ticker]] || self[pick] == scorecard[ROUND_ONE[round_one_ticker + 1]])
@@ -201,12 +233,60 @@ class Bracket < ApplicationRecord
     if !scorecard.pick_third && Team.exists?(:name => self.pick_third) && !Team.find_by(:name => self.pick_third).eliminated
       possible_counter += 20
     end
+    return possible_counter
+  end
 
+  def talent_possible_points
+    scorecard = Scorecard.first
+    possible_counter = self.score
+    round_one_ticker = 0
+    ROUND_TWO.each do |pick|
+      if !scorecard[pick] && check_round_one(pick, round_one_ticker, scorecard)
+        possible_counter += 2
+      end
+      round_one_ticker += 2
+    end
+
+    round_one_ticker = 0
+    round_two_ticker = 0
+    ROUND_THREE.each do |pick|
+      if !scorecard[pick] && check_round_two(pick, round_one_ticker, round_two_ticker, scorecard)
+        possible_counter += 4
+      end
+      round_one_ticker += 4
+      round_two_ticker += 2
+    end
+
+    round_one_ticker = 0
+    round_two_ticker = 0
+    round_three_ticker = 0
+    ROUND_FOUR.each do |pick|
+      if !scorecard[pick] && check_round_three(pick, round_one_ticker, round_two_ticker, round_three_ticker, scorecard)
+        possible_counter += 8
+      end
+      round_one_ticker += 8
+      round_two_ticker += 4
+      round_three_ticker += 2
+    end
+
+    if !scorecard.pick_winner && Team.exists?(:name => self.pick_winner) && !Team.find_by(:name => self.pick_winner).eliminated
+      possible_counter += 16
+    end
+
+    if !scorecard.pick_third && Team.exists?(:name => self.pick_third) && !Team.find_by(:name => self.pick_third).eliminated
+      possible_counter += 12
+    end
     return possible_counter
   end
 
   def rank
-    brackets = Bracket.all.sort { |a, b|  b.score <=> a.score }
+    brackets = Bracket.where(:in_pool => true).sort { |a, b|  b.score <=> a.score }
+    ranking = brackets.index { |obj| obj.score == self.score }
+    return ranking + 1
+  end
+
+  def talent_rank
+    brackets = Bracket.where(:in_pool => false).sort { |a, b|  b.score <=> a.score }
     ranking = brackets.index { |obj| obj.score == self.score }
     return ranking + 1
   end
