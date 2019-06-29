@@ -1,6 +1,19 @@
 class Api::V1::BracketsController < ApplicationController
-  before_action :authenticate_user!, except: []
+  before_action :authenticate_user!, except: [:index, :show]
   protect_from_forgery unless: -> { request.format.json? }
+
+  def index
+    cdh_brackets = Bracket.where(:in_pool => true).sort_by { |a| [-a.score, a.last_name] }
+    production_brackets = Bracket.where(:in_pool => false).sort_by { |a| [-a.score, a.last_name] }
+    render json: {
+      cdh_brackets: ActiveModel::Serializer::CollectionSerializer.new(cdh_brackets, serializer: CdhBracketSerializer),
+      production_brackets: ActiveModel::Serializer::CollectionSerializer.new(production_brackets, serializer: ProductionBracketSerializer)
+    }
+  end
+
+  def show
+
+  end
 
   def create
     response = JSON.parse(request.body.read)

@@ -1,0 +1,38 @@
+<div class="">
+  <h1 class="leaderboard">Leaderboard</h1>
+  <div class="column small-12 medium-6">
+    <h1 class="leaderboard">CDH</h1>
+    <ul class="bracket-list">
+      <% @production_brackets.each do |bracket| %>
+      <li>
+        <p class="ranking inline"><%= bracket.rank %></p>
+        <span class="right">
+          <p class="name inline"><%= link_to bracket.name, bracket_path(bracket), { :class => "name"} %></p>
+          <p class="score-total inline"><%= bracket.score %></p>
+          <p class="total inline"><%= bracket.possible_points %></p>
+          <%= image_tag(bracket.flag, :class => "thumbnail inline") %>
+        </span>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="column small-12 medium-6">
+    <h1 class="leaderboard">Production</h1>
+    <ul class="bracket-list">
+      <% @talent_brackets.each do |bracket| %>
+      <li>
+        <p class="ranking inline"><%= bracket.talent_rank %></p>
+        <span class="right">
+          <p class="name inline"><%= link_to bracket.name, bracket_path(bracket), { :class => "name"} %></p>
+          <p class="score-total inline"><%= bracket.talent_score %></p>
+          <p class="total inline"><%= bracket.talent_possible_points %></p>
+          <%= image_tag(bracket.flag, :class => "thumbnail inline") %>
+        </span>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="column small-12">
+    <%= image_tag("foxfwwc.png", :class => "fox-logo") %>
+  </div>
+</div>
