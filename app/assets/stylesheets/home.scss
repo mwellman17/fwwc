@@ -5,13 +5,20 @@
 }
 
 h1.leaderboard {
+  font-family: 'Abel', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  text-shadow:0 0 12px rgba(0, 0, 0, 0.5);
+  font-size: 5.4em;
+  color: #A50000;
+}
+.leaderboard-small {
   text-align: center;
   font-family: 'France Fifa', serif;
   font-weight: normal;
   font-size: 2.5em;
   margin:0 0 20px;
   text-transform: uppercase;
-  letter-spacing:-1px;
   color: #0F096C;
 }
 
@@ -95,7 +102,8 @@ p.possible-score.year {
   letter-spacing: 5px;
 }
 
-.back-button {
+.back-button,
+.back-button:focus {
   text-align: left;
   padding-left: 2rem;
   margin: 0;
@@ -104,4 +112,11 @@ p.possible-score.year {
 
 .back-button:hover {
   color: #A50000;
+}
+
+.flag-center {
+  margin: 0 auto;
+  width: 100px;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
 }
