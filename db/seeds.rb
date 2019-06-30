@@ -22,45 +22,151 @@
 # scorecard.pick_q7 = "Germany"
 # scorecard.pick_q8 = "Sweden"
 # scorecard.save
+#
+# COUNTRIES_OUT = [
+#   "Argentina",
+#   "Australia",
+#   "Brazil",
+#   "Cameroon",
+#   "Canada",
+#   "Chile",
+#   "China",
+#   "Jamaica",
+#   "Japan",
+#   "South Korea",
+#   "New Zealand",
+#   "Nigeria",
+#   "Scotland",
+#   "South Africa",
+#   "Spain",
+#   "Thailand",
+# ]
+# COUNTRIES_IN = [
+#   "England",
+#   "Germany",
+#   "France",
+#   "Italy",
+#   "Netherlands",
+#   "Norway",
+#   "Sweden",
+#   "USA"
+# ]
+#
+# COUNTRIES_IN.each do |country|
+#   team = Team.new
+#   team.name = country
+#   team.save
+# end
+#
+# COUNTRIES_OUT.each do |country|
+#   team = Team.new
+#   team.name = country
+#   team.eliminated = true
+#   team.save
+# end
 
-COUNTRIES_OUT = [
-  "Argentina",
-  "Australia",
-  "Brazil",
-  "Cameroon",
-  "Canada",
-  "Chile",
-  "China",
-  "Jamaica",
-  "Japan",
-  "South Korea",
-  "New Zealand",
-  "Nigeria",
-  "Scotland",
-  "South Africa",
-  "Spain",
-  "Thailand",
-]
-COUNTRIES_IN = [
-  "England",
-  "Germany",
-  "France",
-  "Italy",
-  "Netherlands",
-  "Norway",
-  "Sweden",
-  "USA"
-]
+Bracket.create!({ name: "Christos Terzides", pick_1: "Norway", pick_2: "Italy", pick_3: "England", pick_4: "Spain", pick_5: "France", pick_6: "Australia", pick_7: "USA", pick_8: "Germany", pick_9: "Brazil", pick_10: "Chile", pick_11: "Netherlands", pick_12: "Argentina", pick_13: "China", pick_14: "Scotland", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Norway", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Brazil", pick_q6: "Netherlands", pick_q7: "China", pick_q8: "Sweden", pick_s1: "Norway", pick_s2: "France", pick_s3: "Brazil", pick_s4: "China", pick_f1: "France", pick_f2: "Brazil", pick_winner: "France", pick_third: "Norway", in_pool: true })
 
-COUNTRIES_IN.each do |country|
-  team = Team.new
-  team.name = country
-  team.save
-end
+Bracket.create!({ name: "Morgane Patris", pick_1: "Norway", pick_2: "Italy", pick_3: "England", pick_4: "Spain", pick_5: "France", pick_6: "Australia", pick_7: "USA", pick_8: "China", pick_9: "Brazil", pick_10: "Chile", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Scotland", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Norway", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Brazil", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Sweden", pick_s1: "England", pick_s2: "France", pick_s3: "Netherlands", pick_s4: "Germany", pick_f1: "France", pick_f2: "Germany", pick_winner: "France", pick_third: "Netherlands", in_pool: true })
 
-COUNTRIES_OUT.each do |country|
-  team = Team.new
-  team.name = country
-  team.eliminated = true
-  team.save
-end
+Bracket.create!({ name: "Devon Finch", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "China", pick_5: "France", pick_6: "Italy", pick_7: "USA", pick_8: "Spain", pick_9: "Brazil", pick_10: "Nigeria", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Australia", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Brazil", pick_q6: "Japan", pick_q7: "Germany", pick_q8: "Canada", pick_s1: "England", pick_s2: "USA", pick_s3: "Brazil", pick_s4: "Germany", pick_f1: "USA", pick_f2: "Germany", pick_winner: "USA", pick_third: "England", in_pool: true })
+
+Bracket.create!({ name: "David Katz", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "New Zealand", pick_5: "France", pick_6: "Scotland", pick_7: "USA", pick_8: "Spain", pick_9: "Brazil", pick_10: "China", pick_11: "Canada", pick_12: "Japan", pick_13: "Germany", pick_14: "Italy", pick_15: "Sweden", pick_16: "Netherlands", pick_q1: "Australia", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Brazil", pick_q6: "Japan", pick_q7: "Germany", pick_q8: "Netherlands", pick_s1: "England", pick_s2: "USA", pick_s3: "Japan", pick_s4: "Germany", pick_f1: "USA", pick_f2: "Germany", pick_winner: "USA", pick_third: "England", in_pool: true })
+
+Bracket.create!({ name: "Sammy", pick_1: "Norway", pick_2: "Italy", pick_3: "England", pick_4: "China", pick_5: "France", pick_6: "Argentina", pick_7: "USA", pick_8: "Germany", pick_9: "Brazil", pick_10: "Chile", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Australia", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Norway", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Brazil", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Sweden", pick_s1: "Norway", pick_s2: "France", pick_s3: "Brazil", pick_s4: "no entry", pick_f1: "France", pick_f2: "Brazil", pick_winner: "France", pick_third: "no entry", in_pool: true })
+
+Bracket.create!({ name: "Julien Aulagnier", pick_1: "Norway", pick_2: "Brazil", pick_3: "England", pick_4: "Spain", pick_5: "France", pick_6: "Italy", pick_7: "USA", pick_8: "China", pick_9: "Australia", pick_10: "Chile", pick_11: "Netherlands", pick_12: "Argentina", pick_13: "Germany", pick_14: "Japan", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Brazil", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Chile", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Canada", pick_s1: "England", pick_s2: "USA", pick_s3: "Netherlands", pick_s4: "Germany", pick_f1: "USA", pick_f2: "Germany", pick_winner: "USA", pick_third: "England", in_pool: true })
+
+Bracket.create!({ name: "Thaimi O'Reilly", pick_1: "Norway", pick_2: "Brazil", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Italy", pick_7: "USA", pick_8: "China", pick_9: "Australia", pick_10: "South Korea", pick_11: "Canada", pick_12: "Japan", pick_13: "Germany", pick_14: "South Korea", pick_15: "Sweden", pick_16: "Cameroon", pick_q1: "Brazil", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Australia", pick_q6: "Japan", pick_q7: "Germany", pick_q8: "Sweden", pick_s1: "Brazil", pick_s2: "USA", pick_s3: "Australia", pick_s4: "Germany", pick_f1: "Brazil", pick_f2: "Australia", pick_winner: "Brazil", pick_third: "USA", in_pool: true })
+
+Bracket.create!({ name: "Mitch", pick_1: "Norway", pick_2: "Italy", pick_3: "England", pick_4: "China", pick_5: "France", pick_6: "Netherlands", pick_7: "USA", pick_8: "Spain", pick_9: "Brazil", pick_10: "Chile", pick_11: "Canada", pick_12: "Argentina", pick_13: "Germany", pick_14: "Japan", pick_15: "Sweden", pick_16: "Australia", pick_q1: "Norway", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Brazil", pick_q6: "Canada", pick_q7: "Germany", pick_q8: "Australia", pick_s1: "England", pick_s2: "France", pick_s3: "Canada", pick_s4: "Germany", pick_f1: "England", pick_f2: "Canada", pick_winner: "England", pick_third: "France", in_pool: true })
+
+Bracket.create!({ name: "Michael Wellman", pick_1: "Norway", pick_2: "Australia", pick_3: "Japan", pick_4: "China", pick_5: "France", pick_6: "New Zealand", pick_7: "USA", pick_8: "Spain", pick_9: "Brazil", pick_10: "South Korea", pick_11: "Netherlands", pick_12: "England", pick_13: "Germany", pick_14: "Italy", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Australia", pick_q2: "Japan", pick_q3: "France", pick_q4: "USA", pick_q5: "South Korea", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Canada", pick_s1: "Japan", pick_s2: "USA", pick_s3: "Netherlands", pick_s4: "Germany", pick_f1: "USA", pick_f2: "Netherlands", pick_winner: "USA", pick_third: "Japan", in_pool: true })
+
+Bracket.create!({ name: "Tim S", pick_1: "France", pick_2: "Norway", pick_3: "Germany", pick_4: "Spain", pick_5: "China", pick_6: "Italy", pick_7: "Brazil", pick_8: "Australia", pick_9: "England", pick_10: "Japan", pick_11: "Netherlands", pick_12: "Canada", pick_13: "New Zealand", pick_14: "Cameroon", pick_15: "no entry", pick_16: "USA", pick_q1: "France", pick_q2: "Germany", pick_q3: "Italy", pick_q4: "Australia", pick_q5: "Japan", pick_q6: "Canada", pick_q7: "New Zealand", pick_q8: "USA", pick_s1: "France", pick_s2: "Australia", pick_s3: "Canada", pick_s4: "USA", pick_f1: "USA", pick_f2: "France", pick_winner: "USA", pick_third: "Australia", in_pool: true })
+
+Bracket.create!({ name: "Nicolas Simone", pick_1: "Nigeria", pick_2: "Australia", pick_3: "Argentina", pick_4: "South Africa", pick_5: "France", pick_6: "Jamaica", pick_7: "USA", pick_8: "Germany", pick_9: "Brazil", pick_10: "Norway", pick_11: "Canada", pick_12: "Japan", pick_13: "Spain", pick_14: "England", pick_15: "Sweden", pick_16: "Cameroon", pick_q1: "Australia", pick_q2: "Argentina", pick_q3: "France", pick_q4: "Germany", pick_q5: "Brazil", pick_q6: "Canada", pick_q7: "Spain", pick_q8: "Cameroon", pick_s1: "Argentina", pick_s2: "France", pick_s3: "Brazil", pick_s4: "Spain", pick_f1: "France", pick_f2: "Brazil", pick_winner: "France", pick_third: "Argentina", in_pool: true })
+
+Bracket.create!({ name: "Alan", pick_1: "South Korea", pick_2: "Italy", pick_3: "England", pick_4: "China", pick_5: "France", pick_6: "Scotland", pick_7: "USA", pick_8: "Germany", pick_9: "Brazil", pick_10: "Norway", pick_11: "Canada", pick_12: "Japan", pick_13: "Spain", pick_14: "Australia", pick_15: "Sweden", pick_16: "Netherlands", pick_q1: "South Korea", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Brazil", pick_q6: "Japan", pick_q7: "Spain", pick_q8: "Netherlands", pick_s1: "England", pick_s2: "USA", pick_s3: "Japan", pick_s4: "Spain", pick_f1: "USA", pick_f2: "Japan", pick_winner: "USA", pick_third: "Spain", in_pool: true })
+
+Bracket.create!({ name: "Kempie", pick_1: "France", pick_2: "Australia", pick_3: "England", pick_4: "New Zealand", pick_5: "Norway", pick_6: "Brazil", pick_7: "Sweden", pick_8: "Spain", pick_9: "Italy", pick_10: "South Korea", pick_11: "Canada", pick_12: "Argentina", pick_13: "Germany", pick_14: "Japan", pick_15: "USA", pick_16: "Netherlands", pick_q1: "France", pick_q2: "England", pick_q3: "Brazil", pick_q4: "Spain", pick_q5: "Italy", pick_q6: "Canada", pick_q7: "Germany", pick_q8: "USA", pick_s1: "England", pick_s2: "Spain", pick_s3: "Italy", pick_s4: "Germany", pick_f1: "Spain", pick_f2: "Germany", pick_winner: "Germany", pick_third: "England", in_pool: true })
+
+Bracket.create!({ name: "Fred Danvin", pick_1: "Norway", pick_2: "Italy", pick_3: "England", pick_4: "New Zealand", pick_5: "France", pick_6: "Australia", pick_7: "USA", pick_8: "Spain", pick_9: "Brazil", pick_10: "South Africa", pick_11: "Canada", pick_12: "Argentina", pick_13: "Germany", pick_14: "Jamaica", pick_15: "Sweden", pick_16: "Netherlands", pick_q1: "Norway", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Brazil", pick_q6: "Canada", pick_q7: "Germany", pick_q8: "Sweden", pick_s1: "England", pick_s2: "France", pick_s3: "Brazil", pick_s4: "Germany", pick_f1: "France", pick_f2: "Germany", pick_winner: "France", pick_third: "England", in_pool: true })
+
+Bracket.create!({ name: "Marie Rose", pick_1: "Nigeria", pick_2: "Brazil", pick_3: "England", pick_4: "Chile", pick_5: "France", pick_6: "Jamaica", pick_7: "USA", pick_8: "China", pick_9: "Italy", pick_10: "Norway", pick_11: "Canada", pick_12: "Japan", pick_13: "Germany", pick_14: "Brazil", pick_15: "Sweden", pick_16: "Cameroon", pick_q1: "Nigeria", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Japan", pick_q7: "Germany", pick_q8: "Sweden", pick_s1: "England", pick_s2: "USA", pick_s3: "Japan", pick_s4: "Germany", pick_f1: "USA", pick_f2: "Japan", pick_winner: "USA", pick_third: "Germany", in_pool: true })
+
+Bracket.create!({ name: "Emilee Cavis", pick_1: "Norway", pick_2: "Italy", pick_3: "England", pick_4: "China", pick_5: "France", pick_6: "Japan", pick_7: "USA", pick_8: "Germany", pick_9: "Brazil", pick_10: "Chile", pick_11: "Netherlands", pick_12: "Argentina", pick_13: "Spain", pick_14: "Australia", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Norway", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Brazil", pick_q6: "Netherlands", pick_q7: "Australia", pick_q8: "Sweden", pick_s1: "England", pick_s2: "France", pick_s3: "Netherlands", pick_s4: "Australia", pick_f1: "France", pick_f2: "Netherlands", pick_winner: "France", pick_third: "England", in_pool: true })
+
+Bracket.create!({ name: "James Goding", pick_1: "Norway", pick_2: "Jamaica", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "New Zealand", pick_7: "USA", pick_8: "Germany", pick_9: "Brazil", pick_10: "Sweden", pick_11: "Netherlands", pick_12: "Argentina", pick_13: "Spain", pick_14: "Nigeria", pick_15: "Chile", pick_16: "Canada", pick_q1: "Norway", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Brazil", pick_q6: "Netherlands", pick_q7: "Spain", pick_q8: "Canada", pick_s1: "England", pick_s2: "France", pick_s3: "Brazil", pick_s4: "Canada", pick_f1: "England", pick_f2: "Brazil", pick_winner: "England", pick_third: "Canada", in_pool: true })
+
+Bracket.create!({ name: "Annisa Jones", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Netherlands", pick_5: "France", pick_6: "Argentina", pick_7: "USA", pick_8: "Germany", pick_9: "Italy", pick_10: "South Africa", pick_11: "Canada", pick_12: "Japan", pick_13: "Spain", pick_14: "Brazil", pick_15: "Sweden", pick_16: "New Zealand", pick_q1: "Norway", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Canada", pick_q7: "Spain", pick_q8: "Sweden", pick_s1: "England", pick_s2: "USA", pick_s3: "Italy", pick_s4: "Spain", pick_f1: "USA", pick_f2: "Spain", pick_winner: "USA", pick_third: "England", in_pool: true })
+
+Bracket.create!({ name: "Marissa McBride", pick_1: "Norway", pick_2: "Italy", pick_3: "England", pick_4: "China", pick_5: "France", pick_6: "Japan", pick_7: "USA", pick_8: "Spain", pick_9: "Australia", pick_10: "Chile", pick_11: "Netherlands", pick_12: "Scotland", pick_13: "Germany", pick_14: "Brazil", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Norway", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Australia", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Canada", pick_s1: "England", pick_s2: "USA", pick_s3: "Netherlands", pick_s4: "Germany", pick_f1: "USA", pick_f2: "Netherlands", pick_winner: "USA", pick_third: "England", in_pool: true })
+
+Bracket.create!({ name: "B. Stafford", pick_1: "Norway", pick_2: "Italy", pick_3: "England", pick_4: "China", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Australia", pick_10: "Nigeria", pick_11: "Netherlands", pick_12: "Scotland", pick_13: "Germany", pick_14: "Japan", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Italy", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Australia", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Sweden", pick_s1: "England", pick_s2: "France", pick_s3: "Netherlands", pick_s4: "Germany", pick_f1: "France", pick_f2: "Netherlands", pick_winner: "Netherlands", pick_third: "Germany", in_pool: true })
+
+Bracket.create!({ name: "Maeva Ferrec", pick_1: "Norway", pick_2: "Italy", pick_3: "England", pick_4: "China", pick_5: "France", pick_6: "Argentina", pick_7: "USA", pick_8: "Spain", pick_9: "Brazil", pick_10: "Nigeria", pick_11: "Netherlands", pick_12: "Scotland", pick_13: "Germany", pick_14: "Australia", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Norway", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Brazil", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Sweden", pick_s1: "England", pick_s2: "France", pick_s3: "Netherlands", pick_s4: "Germany", pick_f1: "France", pick_f2: "Germany", pick_winner: "France", pick_third: "England", in_pool: true })
+
+Bracket.create!({ name: "Francois Letiec", pick_1: "Nigeria", pick_2: "Italy", pick_3: "England", pick_4: "China", pick_5: "France", pick_6: "Cameroon", pick_7: "USA", pick_8: "Spain", pick_9: "Brazil", pick_10: "Chile", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Argentina", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Italy", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Brazil", pick_q6: "Japan", pick_q7: "Germany", pick_q8: "Canada", pick_s1: "England", pick_s2: "France", pick_s3: "Brazil", pick_s4: "Germany", pick_f1: "France", pick_f2: "Germany", pick_winner: "France", pick_third: "England", in_pool: true })
+
+Bracket.create!({ name: "Pineapple", pick_1: "Norway", pick_2: "Brazil", pick_3: "England", pick_4: "New Zealand", pick_5: "France", pick_6: "Scotland", pick_7: "USA", pick_8: "Spain", pick_9: "Australia", pick_10: "China", pick_11: "Canada", pick_12: "Japan", pick_13: "Germany", pick_14: "South Korea", pick_15: "Sweden", pick_16: "Netherlands", pick_q1: "Norway", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Australia", pick_q6: "Japan", pick_q7: "Germany", pick_q8: "Netherlands", pick_s1: "England", pick_s2: "USA", pick_s3: "Australia", pick_s4: "Germany", pick_f1: "USA", pick_f2: "Germany", pick_winner: "USA", pick_third: "England", in_pool: true })
+
+Bracket.create!({ name: "Bryan McAleer", pick_1: "Norway", pick_2: "Italy", pick_3: "England", pick_4: "New Zealand", pick_5: "France", pick_6: "Australia", pick_7: "USA", pick_8: "Spain", pick_9: "Brazil", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Scotland", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Norway", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Brazil", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Canada", pick_s1: "England", pick_s2: "France", pick_s3: "Netherlands", pick_s4: "Germany", pick_f1: "France", pick_f2: "Germany", pick_winner: "France", pick_third: "England", in_pool: true })
+
+Bracket.create!({ name: "David Neal", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Australia", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Canada", pick_s1: "England", pick_s2: "USA", pick_s3: "Italy", pick_s4: "Germany", pick_f1: "USA", pick_f2: "Germany", pick_winner: "USA", pick_third: "England", in_pool: false })
+
+Bracket.create!({ name: "Rob Mikulicka #2", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Norway", pick_q2: "Cameroon", pick_q3: "Brazil", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Japan", pick_q7: "Germany", pick_q8: "Canada", pick_s1: "Cameroon", pick_s2: "USA", pick_s3: "Italy", pick_s4: "Canada", pick_f1: "USA", pick_f2: "Canada", pick_winner: "USA", pick_third: "Italy", in_pool: false })
+
+Bracket.create!({ name: "Johnny Araya", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Australia", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Canada", pick_s1: "Australia", pick_s2: "USA", pick_s3: "Netherlands", pick_s4: "Germany", pick_f1: "USA", pick_f2: "Netherlands", pick_winner: "USA", pick_third: "Australia", in_pool: false })
+
+Bracket.create!({ name: "Rod Conti", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Norway", pick_q2: "Cameroon", pick_q3: "France", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Sweden", pick_s1: "Cameroon", pick_s2: "USA", pick_s3: "Netherlands", pick_s4: "Germany", pick_f1: "USA", pick_f2: "Netherlands", pick_winner: "USA", pick_third: "Germany", in_pool: false })
+
+Bracket.create!({ name: "Lindsay Czarnecki", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Norway", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Sweden", pick_s1: "England", pick_s2: "USA", pick_s3: "Netherlands", pick_s4: "Sweden", pick_f1: "USA", pick_f2: "Sweden", pick_winner: "USA", pick_third: "Netherlands", in_pool: false })
+
+Bracket.create!({ name: "Mallory Davis", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Australia", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Japan", pick_q7: "Germany", pick_q8: "Canada", pick_s1: "England", pick_s2: "USA", pick_s3: "Japan", pick_s4: "Germany", pick_f1: "USA", pick_f2: "Germany", pick_winner: "USA", pick_third: "England", in_pool: false })
+
+Bracket.create!({ name: "Alexis Gilbard", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Norway", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Sweden", pick_s1: "England", pick_s2: "USA", pick_s3: "Netherlands", pick_s4: "Sweden", pick_f1: "USA", pick_f2: "Netherlands", pick_winner: "Netherlands", pick_third: "Sweden", in_pool: false })
+
+Bracket.create!({ name: "Zac Kenworthy", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Australia", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Canada", pick_s1: "England", pick_s2: "USA", pick_s3: "Netherlands", pick_s4: "Germany", pick_f1: "USA", pick_f2: "Netherlands", pick_winner: "USA", pick_third: "Germany", in_pool: false })
+
+Bracket.create!({ name: "Alexi Lalas", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Norway", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Sweden", pick_s1: "England", pick_s2: "France", pick_s3: "Netherlands", pick_s4: "Germany", pick_f1: "France", pick_f2: "Germany", pick_winner: "Germany", pick_third: "England", in_pool: false })
+
+Bracket.create!({ name: "Kate Gill", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Australia", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Sweden", pick_s1: "England", pick_s2: "USA", pick_s3: "Netherlands", pick_s4: "Germany", pick_f1: "USA", pick_f2: "Germany", pick_winner: "USA", pick_third: "England", in_pool: false })
+
+Bracket.create!({ name: "Karina LeBlanc", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Australia", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Canada", pick_s1: "England", pick_s2: "USA", pick_s3: "Netherlands", pick_s4: "Canada", pick_f1: "USA", pick_f2: "Canada", pick_winner: "Canada", pick_third: "England", in_pool: false })
+
+Bracket.create!({ name: "Rob Mikulicka #1", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Australia", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Sweden", pick_s1: "England", pick_s2: "USA", pick_s3: "Netherlands", pick_s4: "Germany", pick_f1: "USA", pick_f2: "Netherlands", pick_winner: "USA", pick_third: "England", in_pool: false })
+
+Bracket.create!({ name: "Ben Grossman", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Norway", pick_q2: "Cameroon", pick_q3: "France", pick_q4: "USA", pick_q5: "China", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Sweden", pick_s1: "Norway", pick_s2: "USA", pick_s3: "Netherlands", pick_s4: "Germany", pick_f1: "USA", pick_f2: "Germany", pick_winner: "USA", pick_third: "Norway", in_pool: false })
+
+Bracket.create!({ name: "Jeff Hershey", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Norway", pick_q2: "England", pick_q3: "Brazil", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Japan", pick_q7: "Germany", pick_q8: "Canada", pick_s1: "Norway", pick_s2: "USA", pick_s3: "Italy", pick_s4: "Canada", pick_f1: "USA", pick_f2: "Canada", pick_winner: "USA", pick_third: "Norway", in_pool: false })
+
+Bracket.create!({ name: "Kelly Smith", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Norway", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Canada", pick_s1: "England", pick_s2: "USA", pick_s3: "Netherlands", pick_s4: "Germany", pick_f1: "USA", pick_f2: "Netherlands", pick_winner: "USA", pick_third: "England", in_pool: false })
+
+Bracket.create!({ name: "Joel Santos", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Norway", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Sweden", pick_s1: "Norway", pick_s2: "USA", pick_s3: "Netherlands", pick_s4: "Sweden", pick_f1: "USA", pick_f2: "Netherlands", pick_winner: "USA", pick_third: "Norway", in_pool: false })
+
+Bracket.create!({ name: "Raven Swayne #1", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Australia", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Canada", pick_s1: "England", pick_s2: "USA", pick_s3: "Italy", pick_s4: "Germany", pick_f1: "USA", pick_f2: "Germany", pick_winner: "USA", pick_third: "England", in_pool: false })
+
+Bracket.create!({ name: "Rob Stone", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Norway", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "China", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Sweden", pick_s1: "England", pick_s2: "USA", pick_s3: "Netherlands", pick_s4: "Germany", pick_f1: "USA", pick_f2: "Germany", pick_winner: "USA", pick_third: "England", in_pool: false })
+
+Bracket.create!({ name: "Raven Swayne #2", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Australia", pick_q2: "Cameroon", pick_q3: "Brazil", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Japan", pick_q7: "Germany", pick_q8: "Canada", pick_s1: "Australia", pick_s2: "USA", pick_s3: "Japan", pick_s4: "Germany", pick_f1: "USA", pick_f2: "Germany", pick_winner: "USA", pick_third: "Australia", in_pool: false })
+
+Bracket.create!({ name: "Martin Thorstensson", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Australia", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Canada", pick_s1: "England", pick_s2: "France", pick_s3: "Netherlands", pick_s4: "Germany", pick_f1: "France", pick_f2: "Netherlands", pick_winner: "France", pick_third: "Germany", in_pool: false })
+
+Bracket.create!({ name: "Marissa McBride", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Australia", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Canada", pick_s1: "England", pick_s2: "USA", pick_s3: "Netherlands", pick_s4: "Germany", pick_f1: "USA", pick_f2: "Netherlands", pick_winner: "USA", pick_third: "Germany", in_pool: false })
+
+Bracket.create!({ name: "Ari Hingst", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Norway", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Canada", pick_s1: "England", pick_s2: "France", pick_s3: "Netherlands", pick_s4: "Germany", pick_f1: "France", pick_f2: "Germany", pick_winner: "Germany", pick_third: "Netherlands", in_pool: false })
+
+Bracket.create!({ name: "Mark Young", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Norway", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Sweden", pick_s1: "Norway", pick_s2: "France", pick_s3: "Netherlands", pick_s4: "Sweden", pick_f1: "France", pick_f2: "Netherlands", pick_winner: "France", pick_third: "Norway", in_pool: false })
+
+Bracket.create!({ name: "David Mosse", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Norway", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "China", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Canada", pick_s1: "England", pick_s2: "USA", pick_s3: "Netherlands", pick_s4: "Germany", pick_f1: "England", pick_f2: "Germany", pick_winner: "England", pick_third: "USA", in_pool: false })
+
+Bracket.create!({ name: "Eni Aluko", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Norway", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Sweden", pick_s1: "England", pick_s2: "USA", pick_s3: "Netherlands", pick_s4: "Germany", pick_f1: "USA", pick_f2: "Netherlands", pick_winner: "USA", pick_third: "England", in_pool: false })
+
+Bracket.create!({ name: "Annisa Jones", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Australia", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Canada", pick_s1: "England", pick_s2: "USA", pick_s3: "Netherlands", pick_s4: "Canada", pick_f1: "USA", pick_f2: "Netherlands", pick_winner: "USA", pick_third: "Canada", in_pool: false })
+
+Bracket.create!({ name: "Claudia Martinez", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Australia", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Sweden", pick_s1: "England", pick_s2: "France", pick_s3: "Netherlands", pick_s4: "Germany", pick_f1: "France", pick_f2: "Netherlands", pick_winner: "France", pick_third: "Germany", in_pool: false })
+
+Bracket.create!({ name: "B. Stafford", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Australia", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Sweden", pick_s1: "England", pick_s2: "USA", pick_s3: "Netherlands", pick_s4: "Germany", pick_f1: "USA", pick_f2: "Netherlands", pick_winner: "Netherlands", pick_third: "England", in_pool: false })
+
+Bracket.create!({ name: "Heather O'Reilly", pick_1: "Norway", pick_2: "Australia", pick_3: "England", pick_4: "Cameroon", pick_5: "France", pick_6: "Brazil", pick_7: "USA", pick_8: "Spain", pick_9: "Italy", pick_10: "China", pick_11: "Netherlands", pick_12: "Japan", pick_13: "Germany", pick_14: "Nigeria", pick_15: "Sweden", pick_16: "Canada", pick_q1: "Australia", pick_q2: "England", pick_q3: "France", pick_q4: "USA", pick_q5: "Italy", pick_q6: "Netherlands", pick_q7: "Germany", pick_q8: "Canada", pick_s1: "England", pick_s2: "USA", pick_s3: "Netherlands", pick_s4: "Germany", pick_f1: "USA", pick_f2: "Netherlands", pick_winner: "USA", pick_third: "England", in_pool: false })

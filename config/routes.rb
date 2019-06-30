@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :brackets, only: [:index, :show]
+  get 'admin', to: 'homes#admin'
 
   namespace :api do
     namespace :v1 do
