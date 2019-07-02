@@ -28,6 +28,8 @@ end
     return ""
   elsif last_round && @scorecard[last_round[0]] != team && @scorecard[last_round[1]] != team
     return "incorrect-pick"
+  elsif pick == "pick_third" && (team == $scorecard.pick_f1 || team == @scorecard.pick_f2)
+    return "incorrect-pick"
   else
     return ""
   end
