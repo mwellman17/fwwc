@@ -3,7 +3,7 @@ class Scorecard < ApplicationRecord
     if self.pick_winner
       return "#{self.pick_winner}.png"
     else
-      return "fifa.png"
+      return ""
     end
   end
 end

@@ -1,8 +1,8 @@
-<div class="">
+<div class="homepage">
   <div class="column small-12 text-center">
     <h1 class="leaderboard">Leaderboard</h1>
   </div>
-  <div class="column small-12 large-5">
+  <div class="column medium-12 large-6">
     <h1 class="leaderboard-small">CDH</h1>
     <ul class="bracket-list">
       <% @production_brackets.each do |bracket| %>
@@ -18,10 +18,7 @@
       <% end %>
     </ul>
   </div>
-  <div class="column small-12 large-2 text-center">
-    <%= image_tag($scorecard.flag, :class => "flag-center") %>
-  </div>
-  <div class="column small-12 large-5">
+  <div class="column medium-12 large-6">
     <h1 class="leaderboard-small">Production</h1>
     <ul class="bracket-list">
       <% @talent_brackets.each do |bracket| %>
