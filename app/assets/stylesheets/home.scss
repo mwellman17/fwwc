@@ -9,7 +9,7 @@ h1.leaderboard {
   text-transform: uppercase;
   letter-spacing: 6px;
   text-shadow:0 0 12px rgba(0, 0, 0, 0.5);
-  font-size: 5.4em;
+  font-size: 3em;
   color: #A50000;
 }
 .leaderboard-small {
@@ -25,6 +25,7 @@ h1.leaderboard {
 .bracket-list {
   width: 400px;
   margin: 0 auto;
+  padding-bottom: 2rem;
 }
 
 li {
@@ -48,13 +49,13 @@ li {
 
 .ranking {
   font-weight: bold;
-  font-size: 22pt;
+  font-size: 1.6rem;
   padding-right: 1.5rem;
 }
 
 .score-total {
   font-weight: bold;
-  font-size: 22pt;
+  font-size: 1.6rem;
   color: #0F096C;
 }
 
@@ -62,6 +63,7 @@ a.name {
   font-family: sans-serif;
   color: #0F096C;
   text-transform: uppercase;
+  font-size: 1rem;
 }
 
 a.name:hover {
@@ -70,6 +72,7 @@ a.name:hover {
 
 .total {
   color: grey;
+  font-size: 1rem;
 }
 
 .trophy-img {
@@ -119,4 +122,19 @@ p.possible-score.year {
   width: 100px;
   -webkit-filter: drop-shadow(5px 5px 5px #222);
   filter: drop-shadow(5px 5px 5px #222);
+}
+
+@media screen and (max-width: 400px) {
+  .bracket-list {width: 350px;}
+  a.name, .total {font-size: .8rem}
+  .ranking, .score-total {font-size: 1.4rem}
+}
+
+@media screen and (max-width: 320px) {
+  .bracket-list {width: 270px;}
+  a.name, .total {font-size: .6rem}
+  .ranking, .score-total {font-size: 1.2rem}
+  .thumbnail {width: 30px;}
+  h1.leaderboard {font-size: 2rem}
+  .leaderboard-small {font-size: 1.5rem}
 }
