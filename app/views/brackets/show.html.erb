@@ -30,6 +30,8 @@ end
     return "incorrect-pick"
   elsif pick == "pick_third" && (team == $scorecard.pick_f1 || team == @scorecard.pick_f2)
     return "incorrect-pick"
+  elsif pick == "pick_winner" && @eliminated_teams.include?(team)
+    return "incorrect-pick"
   else
     return ""
   end
