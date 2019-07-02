@@ -22,7 +22,7 @@ end
     return "correct-pick"
   elsif team == "no entry"
     return "no-entry"
-  elsif @eliminated_teams.include?(team) || (@scorecard[pick] && team != @scorecard[pick])
+  elsif (@eliminated_teams.include?(team) && team != @scorecard.pick_s1 && team != @scorecard.pick_s2 && team != @scorecard.pick_s3 && team != @scorecard.pick_s4) || (@scorecard[pick] && team != @scorecard[pick])
     return "incorrect-pick"
   elsif last_round && (@scorecard[last_round[0]].nil? || @scorecard[last_round[1]].nil?)
     return ""
