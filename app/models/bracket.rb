@@ -227,7 +227,7 @@ class Bracket < ApplicationRecord
       possible_counter += 50
     end
 
-    if !$scorecard.pick_third && Team.exists?(:name => self.pick_third) && !Team.find_by(:name => self.pick_third).eliminated && self.pick_third != $scorecard.pick_f1 && self.pick_third != $scorecard.pick_f2 || (Team.exists?(:name => self.pick_third) && Team.find_by(:name => self.pick_third).eliminated && (self.pick_third == $scorecard.pick_s1 || self.pick_third == $scorecard.pick_s2 || self.pick_third == $scorecard.pick_s3 || self.pick_third == $scorecard.pick_s4)) && self.pick_third != $scorecard.pick_f1 && self.pick_third != $scorecard.pick_f2
+    if !$scorecard.pick_third && Team.exists?(:name => self.pick_third) && !Team.find_by(:name => self.pick_third).eliminated && self.pick_third != $scorecard.pick_f1 && self.pick_third != $scorecard.pick_f2 || !$scorecard.pick_third && (Team.exists?(:name => self.pick_third) && Team.find_by(:name => self.pick_third).eliminated && (self.pick_third == $scorecard.pick_s1 || self.pick_third == $scorecard.pick_s2 || self.pick_third == $scorecard.pick_s3 || self.pick_third == $scorecard.pick_s4)) && self.pick_third != $scorecard.pick_f1 && self.pick_third != $scorecard.pick_f2
       possible_counter += 20
     end
     return possible_counter
@@ -269,7 +269,7 @@ class Bracket < ApplicationRecord
       possible_counter += 16
     end
 
-    if !$scorecard.pick_third && Team.exists?(:name => self.pick_third) && !Team.find_by(:name => self.pick_third).eliminated && self.pick_third != $scorecard.pick_f1 && self.pick_third != $scorecard.pick_f2 || (Team.exists?(:name => self.pick_third) && Team.find_by(:name => self.pick_third).eliminated && (self.pick_third == $scorecard.pick_s1 || self.pick_third == $scorecard.pick_s2 || self.pick_third == $scorecard.pick_s3 || self.pick_third == $scorecard.pick_s4))
+    if !$scorecard.pick_third && Team.exists?(:name => self.pick_third) && !Team.find_by(:name => self.pick_third).eliminated && self.pick_third != $scorecard.pick_f1 && self.pick_third != $scorecard.pick_f2 || !$scorecard.pick_third && (Team.exists?(:name => self.pick_third) && Team.find_by(:name => self.pick_third).eliminated && (self.pick_third == $scorecard.pick_s1 || self.pick_third == $scorecard.pick_s2 || self.pick_third == $scorecard.pick_s3 || self.pick_third == $scorecard.pick_s4))
       possible_counter += 12
     end
     return possible_counter
