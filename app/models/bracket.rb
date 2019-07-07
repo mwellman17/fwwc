@@ -282,8 +282,8 @@ class Bracket < ApplicationRecord
   end
 
   def talent_rank
-    brackets = Bracket.where(:in_pool => false).sort { |a, b|  b.score <=> a.score }
-    ranking = brackets.index { |obj| obj.score == self.score }
+    brackets = Bracket.where(:in_pool => false).sort { |a, b|  b.talent_score <=> a.talent_score }
+    ranking = brackets.index { |obj| obj.talent_score == self.talent_score }
     return ranking + 1
   end
 
